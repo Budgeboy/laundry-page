@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+:root{
+   --colour-1:#61dfff;
+   --colour2:#e4a216;
+   --colour3:
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 39);
+    font-family: 'Montserrat Alternates', sans-serif;
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+img{
+    width: 100%;
+}
+a{
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+ul li{
+    list-style: none;
+}
+/* navbar */
+.navbar{
+    background-color: rgb(1, 1, 63);
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.25s linear;
+}
+.nav-link:hover::after{
+    transform: bottom right;
+    transform: scaleX(1);
+}
+.nav-link:hover{
+    color: #fff;
+}
+.navbar-nav{
+    margin-left: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+.collapse .btn{
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+}
+.collapse .btn:hover, .collapse .btn:focus{
+    box-shadow: inset 0 -3.25em 0 0 var(--colour-1);
+    color: #fff;
+}
+/* services */
+.introduction{
+    color: #fff;
+}
+.introduction h6{
+    position: relative;
+}
+.introduction h6:after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 80px;
+    background-color: #e4a216;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+    cursor: pointer;
+}
+.introduction h6:hover::after{
+    width: 50%;
+    background-color:var(--colour2);
+}
+.serve h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.5;
+}
+.serve .btn{
+    background-color: #e4a216;
+    color: #fff;
+    border-radius: 50px;
+}
+.serve .btn:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid var(--colour2);
+}
+.card
+{
+    background-color: #61dfff;
+    cursor: pointer;
+    width: 350px;
+}
+.top img{
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+.top h1{
+    font-size: 4rem;
+    color: transparent;
+    -webkit-text-stroke: 0.4px #fff;
+}
+.card p{
+    max-width: 350px;
+}
+.card .btn{
+    color: #fff;
+}
+.service-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 20px;
+}
+.card:not(.active){
+    background-color: rgb(1, 1, 63);
+    border: 2px solid var(--colour-1);
+}
+.card:not(.active) h1{
+    opacity: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.card:not(.active, .price-card):hover{
+    background-color: #61dfff;
+}
+.card:not(.active) .top img{
+    filter: none;
+}
+.card:not(.active):hover .top img{
+    filter: brightness(0) invert(1);
+}
+.card:not(.active):hover h1{
+    opacity: 1;
+}
+.service-card:hover .column{
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+.service-card:hover .column:hover{
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+/* pricing */
+.introduction .btn{
+    background-color: #e4a216;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.introduction .btn:hover{
+    border: 2px solid #e4a216;
+    color: #fff;
+    background-color: transparent;
+}
+.price-card img{
+    width: 70px;
+    height: auto;
+}
+.price-card{
+    border-radius: 10px;
+    border: 1px solid #61dfff;
+}
+.price-card:hover{
+    background-color: rgb(1, 1, 63);
+    cursor: pointer;
+}
+.price-card p small{
+    color: #61dfff;
+}
+.price-card big{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+.plan{
+    border-left: 5px solid #e4a216;
+}
+.price-card hr{
+    color: #61dfff;
+}
+.price-plans{
+    display: flex;
+    column-gap: 30px;
+    line-height: 2;
+}
+.price-plans ul li{
+    color: #fff;
+    font-size: 0.9rem;
+}
+.avail{
+    display: flex;
+    flex-direction: column;
+}
+.avail i{
+    font-size: 0.9rem;
+    color: #e4a216;
+    font-weight: 500;
+}
+.price-card .btn{
+    background-color: transparent;
+    border: 2px solid #61dfff;
+    color: #61dfff;
+    border-radius: 50px;
+    font-weight: 500;
+}
+.price-card .btn:hover{
+    background-color: #61dfff;
+    color: #fff;
+}
+/* footer */
+footer{
+    padding-block: 50px;
+    background-image: url(../laundry/SL_0210121_40570_75.jpg);
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.foot1 img{
+    width: 100px;
+    height: 50px;
+}
+.foot1 i{
+    background-color: #e4a216;
+    color: #fff;
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.foot1 i:hover{
+    background-color: transparent;
+    color: #61dfff;
+}
+.foot1 a, .foot2 a, .foot3 a, .foot4 a{
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 1;  
+}
+.foot1 p{
+    max-width: 350px;
+}
+.foot2, .foot3, .foot4{
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+}
+.foot2 h5, .foot3 h5, .foot4 h5{
+    font-size: 1rem;
+    color: #e4a216;
+}
+.foot2 i, .foot3 i, .foot4 i{
+    color: #61dfff;
+}
+@media (max-width:769px){
+    footer{
+        height: 170vh;
+    }
+}

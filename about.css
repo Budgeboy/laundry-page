@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+:root{
+   --colour-1:#61dfff;
+   --colour2:#e4a216;
+   --colour3:
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 39);
+    font-family: 'Montserrat Alternates', sans-serif;
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+img{
+    width: 100%;
+}
+a{
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+ul li{
+    list-style: none;
+}
+/* navbar */
+.navbar{
+    background-color: rgb(1, 1, 63);
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.25s linear;
+}
+.nav-link:hover::after{
+    transform: bottom right;
+    transform: scaleX(1);
+}
+.nav-link:hover{
+    color: #fff;
+}
+.navbar-nav{
+    margin-left: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+.collapse .btn{
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+}
+.collapse .btn:hover, .collapse .btn:focus{
+    box-shadow: inset 0 -3.25em 0 0 var(--colour-1);
+    color: #fff;
+}
+/* about */
+.introduction{
+    color: #fff;
+}
+.introduction h6{
+    position: relative;
+}
+.introduction h6:after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 80px;
+    background-color: #e4a216;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+    cursor: pointer;
+}
+.introduction h6:hover::after{
+    width: 50%;
+    background-color:var(--colour2);
+}
+.text-overlay{
+    background-color: #61dfff;
+    padding: 2rem 2.5rem;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -53rem;
+    left: -3rem;
+}
+.text-overlay p{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0 auto;
+    font-weight: 900;
+}
+.image-container img{
+    opacity: 0.6;
+}
+.bout h1{
+    font-size: 2.4rem;
+}
+.bout h1 span{
+    color: #61dfff;
+}
+.lorem{
+    border-left: 4px solid #61dfff;
+    padding: 1.3rem 1rem;
+}
+.serv{
+    display: flex;
+    width: 600px;
+}
+.serv img{
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+}
+.icon-word p{
+    max-width: 400px;
+}
+.bout .btn{
+    background-color: #e4a216;
+    color: #fff;
+    border-radius: 50px;
+}
+.bout .btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--colour2);
+}
+/* testimonial */
+#testimonials{
+    padding-block: 30px;
+}
+.test-box{
+    border-radius: 10px;
+    padding: 0 1.5rem;
+    background-color: #61dfff;
+}
+.test-box img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: -2rem;
+    left: 1rem;
+}
+.author-img img{
+    border-radius: 100%;
+    width: 70px;
+    height: auto;
+    border: 3px solid #61dfff;
+}
+.author-img span{
+    color: #61dfff;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.arrow{
+    width: 20px;
+    height: 20px;
+    background-color: #61dfff;
+    position: relative;
+    top: -2rem;
+    left: 2rem;
+    transform: rotate(25deg);
+    z-index: 1;
+}
+.review-box img{
+    width: 150px;
+    height:auto;
+}
+/* footer */
+footer{
+    padding-block: 50px;
+    background-image: url(../laundry/5295526.jpg);
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.foot1 img{
+    width: 100px;
+    height: 50px;
+}
+.foot1 i{
+    background-color: #e4a216;
+    color: #fff;
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.foot1 i:hover{
+    background-color: transparent;
+    color: #61dfff;
+}
+.foot1 a, .foot2 a, .foot3 a, .foot4 a{
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 1;  
+}
+.foot1 p{
+    max-width: 350px;
+}
+.foot2, .foot3, .foot4{
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+}
+.foot2 h5, .foot3 h5, .foot4 h5{
+    font-size: 1rem;
+    color: #e4a216;
+}
+.foot2 i, .foot3 i, .foot4 i{
+    color: #61dfff;
+}
+@media (max-width:1138px){
+    footer{
+        height: 170vh;
+    }
+}
